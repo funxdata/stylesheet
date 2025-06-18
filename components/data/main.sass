@@ -1,0 +1,24 @@
+/**
+* Name：main
+* Type: doc、manage
+**/
+
+/****************** manage ******************/ 
+.vg-main-doc{
+    position: relative;
+    height: 100vh;
+    padding: 6.5rem 0 1.5rem;
+    overflow: hidden scroll;
+    .scrollbar();
+    -webkit-overflow-scrolling:touch;
+
+    
+}
+
+// manage (注意：此处添加overflow:hidden;因为flex:1时，宽度依然撑开了父容器的最大宽度，展品管理中的一个bug)
+.vg-mains{
+    height: 100vh;
+    .overflow-hidden();   
+}
+
+

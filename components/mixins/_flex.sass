@@ -1,0 +1,57 @@
+/** 定义flex网格系统 **/
+.calc-flex-col(@idx, @class, @type) when (@type = width) and (@idx <= @flex-column) {
+    .col@{class}@{idx} {
+        flex:0 0 auto;
+        width: percentage((@idx / @flex-column));
+    }
+}
+.calc-flex-col(@idx, @class, @type) when (@type = order) and (@idx <= @flex-column) {
+    .col@{class}order-@{idx} {
+        order: @idx;
+    }
+}
+.calc-flex-col(@idx, @class, @type) when (@type = offset) and (@idx <= @flex-column) {
+    .col@{class}offset-@{idx} {
+        margin-left: percentage((@idx / @flex-column));
+    }
+}
+
+//  循环flex
+.close-flex-col(@idx, @class, @type) when (@idx>0){
+    .calc-flex-col(@idx, @class, @type);
+    .close-flex-col((@idx - 1), @class, @type);
+    
+}
+.flex-class(@class){
+    .close-flex-col(@flex-column, @class, width);
+    .close-flex-col(@flex-column, @class, order);
+    .close-flex-col(@flex-column, @class, offset);
+}
+
+//row(横向布局)
+.make-row(@flex:flex;@width:100%;){
+    position: relative;
+    display: @flex;
+    width: @width;
+}
+
+//row(纵向布局)
+.make-col{
+    // position: absolute;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+// 设置flex混合
+.flex-set(@flex,@align){
+    display: flex;
+    align-items: @align;
+    justify-content: @justify-content;
+    flex-grow: @flex-grow;
+    flex-wrap: @flex-wrap;
+    
+}

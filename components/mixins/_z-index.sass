@@ -1,0 +1,8 @@
+/** 生成z-index间隔类名 **/
+
+// 提升层级z-(1-9)
+each(@zIndex,{
+    .z-@{key}{
+        z-index: @value;
+    }
+});

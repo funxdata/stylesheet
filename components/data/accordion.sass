@@ -1,0 +1,56 @@
+// 手风琴折叠面板
+.vg-accordion{
+    
+    &-li{
+        overflow: hidden;
+        &.select {
+            .vg-accordion-title{
+                i{transform: rotate(90deg);}
+            }
+            .vg-accordion-content{
+                .show();
+                .bg-gray-50();
+                // height: auto;
+                // transform: scaleY(1);
+                border-radius: 0 0 6px 6px;
+            }
+        }
+    }
+    
+    &-title{
+        .font-size-14();
+        .font-weight-xl();
+        display: flex;
+        align-items: center;
+        height: 2.75rem;
+        border-bottom: 1px solid @border-color-100;
+        color: @gray-900;
+        transition: border-color .15s;
+        cursor: pointer;
+        &:hover{
+            border-color: @border-color-400;
+        }
+        .name{
+            flex: 1;
+        }
+        i{
+            color: @gray-500;
+            font-size: @font-size-18;
+            line-height: @line-height-lg;
+            transition:color .15s,transform .15s;
+        }
+    }
+    &-content{
+        .hide();
+        // .vis-hide();
+        // height: 0;
+        // padding: 0.5rem 0;
+        // height: 0;
+        color: @gray-900;
+        font-size: @font-size-14;
+        // transform-origin: top;
+        // transform: scaleY(0);
+        // transition: .3s;
+    }
+}
+

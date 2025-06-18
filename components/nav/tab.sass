@@ -1,0 +1,106 @@
+/*
+ * Name:            tab
+ * 
+ * Description(描述):     标签样式
+ * 
+ * Component(组成):   `vg-tab`
+ * 
+ * satur(包含):        `vg-tab-design`、`vg-tab-illustrator`、
+*/
+
+//Default tab
+.vg-tabs{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    // column-gap: 14px;
+    white-space: nowrap;
+    user-select: none;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: darken(@gray-200,3%);
+    }
+    &-li{
+        position: relative;
+        padding-bottom: 0.5rem;
+        margin-right: 0.875rem;
+        font-size: @font-size-14;
+        color: @gray-500;
+        line-height:@line-height-xxl;
+        white-space: nowrap;
+        list-style: none;
+        cursor: pointer;
+        transition: .2s ease;
+        &:last-of-type{
+            margin-right: 0;
+        }
+        &::after{
+            content: '';
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            margin: auto;
+            background-color: @brand;
+            border-radius: @border-radius-max;
+            transition: .2s ease;
+            z-index: 1;
+        }
+        &:not(.select,.disabled):hover{
+            color: darken(@gray-500, 7%);
+        }
+        &.select{
+            color: @gray-900;
+            font-weight: @font-weight-lg;
+            cursor: revert;
+            &::after{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.vg-tabs-design{
+    &-item{
+        position: relative;
+        height: 1.75rem;
+        padding: 0.375rem;
+        background-color: var(--design-color-3A3A3A);
+        border-bottom: 1px solid var(--design-color-262626);
+        font-size: @font-size-12;
+        font-weight: @font-weight-lg;
+        color: var(--design-color-A6A6A6);
+        cursor: pointer;
+        &:not(.select):hover{
+            background-color: var(--design-color-262626);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background-color: var(--design-color-262626);
+        }
+        &:last-of-type{
+            &::after{display: none;}
+        }
+        &.select{
+            background-color: transparent;
+            color: var(--design-color-FFFFFF);
+            border-bottom: transparent;
+        }
+    }
+}

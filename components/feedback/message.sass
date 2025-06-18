@@ -1,0 +1,38 @@
+/** 文本提示组件 **/
+.vg-message{
+  user-select: none;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 15vh;
+  right: 0;
+  left: 0;
+  width: max-content;
+  max-width: 80%;
+  padding: 0.375rem 0.75rem;
+  margin: 0 auto;
+  gap: 0.75rem;
+  background-color: @white;
+  border-radius: @border-radius-lg;
+  color: @warn;
+  font-size: @font-size-14;
+  text-align: left;
+  z-index:11;
+  box-shadow:@box-shadow-sm;
+  animation: bottonTopAnima 1s ease;
+
+  // 适配768屏幕
+  .media-pad({
+    top:10vh;
+    box-shadow:@box-shadow-md;
+  });
+}
+
+// 颜色类型
+.vg-message.message-success{color:@brand;}
+.vg-message.message-warn{color: @warn;}
+.vg-message.message-error{color:@error;}
+.vg-message.message-info{color:@info;}
+
+// 尺寸类型
+.vg-message.message-size-lg{width: 17.5rem;}

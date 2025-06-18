@@ -1,0 +1,19 @@
+
+//单行超出隐藏
+.text-truncate{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行超出隐藏
+.text-truncate-all(@text-align:left;@number:2;){
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    text-align: @text-align;
+    -webkit-line-clamp:@number; 
+    autoprefixer: ignore next;//解决less下不起作用
+    -webkit-box-orient:vertical;
+}

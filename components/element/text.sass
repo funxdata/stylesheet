@@ -1,0 +1,59 @@
+/** 文字元素 **/
+
+//h标题
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: @inherit-font-family;
+    font-weight: @font-weight-xxl;
+    line-height: @line-height-xl;
+}
+
+.h0 { 
+    font-size: @font-size-48; 
+    
+}
+.h1 { 
+    font-size: @font-size-40; 
+    
+}
+.h2 { 
+    font-size: @font-size-32; 
+    
+}
+.h3 { 
+    font-size: @font-size-28; 
+    
+}
+.h4 { 
+    font-size: @font-size-24; 
+    
+}
+.h5 { 
+    font-size: @font-size-20; 
+    
+}
+.h6 { 
+    font-size: @font-size-18; 
+    
+}
+
+
+//link链接
+.vg-link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: @brand;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{color: lighten(spin(@brand,-3),4%);}
+    &:active{color: darken(@brand, 5%);}
+    &.block{
+        display:block;
+    }
+}
+

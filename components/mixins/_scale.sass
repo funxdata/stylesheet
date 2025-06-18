@@ -1,0 +1,16 @@
+// 定义缩放比例列表
+@scale-values: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+// 使用循环生成缩放类
+.generate-scale-classes(@index) when (@index > 0) {
+    @value: extract(@scale-values, @index);
+    .scale-@{value} {
+        // 将值除以 100 以获得实际的缩放比例
+        @scale: calc(@value / 100);
+        transform: scale(@scale);
+    }
+    .generate-scale-classes(@index - 1);
+}
+
+// 从列表的最后一个元素开始生成类
+.generate-scale-classes(length(@scale-values));

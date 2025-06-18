@@ -1,0 +1,145 @@
+// 视频播放器
+.vg-video{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    color: @white;
+    padding: 0;
+    background-color: @black;
+    font-size: @font-size-12;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    word-break: initial;
+    vertical-align: top;
+    &.row{.row();}
+    // &-tech{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    // video-js
+    &.video-js{
+        width: 100% ;
+        max-width: 100%;
+        height: 0 ;
+        padding-bottom: 56.25%;
+        button{
+            outline: none;
+        }
+        /* 视频占满容器高度 */
+        &.vjs-fluid,
+        &.vjs-16-9,
+        &.vjs-4-3{ 
+            height: 100%;
+            background-color: #161616;
+        }
+        &~.vjs-poster{
+            background-color: #161616;
+        }
+        /* 中间大的播放按钮 */
+        .vjs-big-play-button{ 
+            font-size: 2.5em;
+            line-height: 2.2em;
+            height: 2.4em;
+            width: 2.4em;
+            -webkit-border-radius: 2.5em;
+            -moz-border-radius: 2.5em;
+            border-radius: 2.5em;
+            background-color: rgba(115,133,159,.5);
+            border-width: 0.12em;
+            margin-top: -1.25em;
+            margin-left: -1.75em;
+        }
+        /* 视频暂停时显示播放按钮 */
+        &.vjs-paused .vjs-big-play-button{ 
+            display: block;
+        }
+        /* 视频暂停时显示播放按钮 */
+        &.vjs-paused .vjs-big-play-button{ 
+            display: block;
+        }
+        /* 视频加载出错时隐藏播放按钮 */
+        &.vjs-error .vjs-big-play-button{ 
+            display: none;
+        }
+        /* 加载圆圈 */
+        .vjs-loading-spinner { 
+            font-size: 2.5em;
+            width: 2em;
+            height: 2em;
+            border-radius: 1em;
+            margin-top: -1em;
+            margin-left: -1.5em;
+        }
+        /* 控制条默认显示 */
+        & .vjs-control-bar{ 
+            display: flex;
+        }
+        & .vjs-time-control{display:block;}
+        & .vjs-remaining-time{display: none;}
+        
+        .vjs-button > .vjs-icon-placeholder:before{ /* 控制条所有图标，图标字体大小最好使用px单位，如果使用em，各浏览器表现可能会不大一样 */
+            font-size: 2em;
+            line-height: 1.5;
+        }
+        & .vjs-playback-rate .vjs-playback-rate-value{
+            line-height: 2.4;
+            font-size: 1.125rem;
+        }
+        /* 进度条背景色 */
+        & .vjs-play-progress{
+            color: var(--flowing-color-0962FB);
+            background-color: var(--flowing-color-0962FB);
+        }
+        & .vjs-progress-control .vjs-mouse-display{
+            background-color: var(--flowing-color-0962FB);
+        }
+        .vjs-mouse-display .vjs-time-tooltip{
+            padding-bottom: 6px;
+            background-color: var(--flowing-color-0962FB);
+        }
+        & .vjs-play-progress .vjs-time-tooltip{
+            display: none!important;
+        }
+        
+    }
+    video{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.vg-videos-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .vg-videos{
+        width: 100%;
+        height: 100%;
+        background-color: @black;
+        .tiny-player-content{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .vg-videos-cover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        .tp-container{
+            
+        }
+        .tp-control-panel >*{
+            display: none;
+            opacity: 0;
+        }
+    }
+}
+

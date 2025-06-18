@@ -1,0 +1,68 @@
+.gap_value(@key;@value;){
+    .m-@{key}{margin: @value;}
+    .mt-@{key}{
+        margin-top: @value;
+    }
+    .mr-@{key}{
+        margin-right: @value;
+    }
+    .mb-@{key}{
+        margin-bottom: @value;
+    }
+    .ml-@{key}{
+        margin-left: @value;
+    }
+    .mg-@{key}{
+        margin: @value;
+    }
+    .mrow-@{key}{
+        margin-top: @value;
+        margin-bottom: @value;
+    }
+    .mcol-@{key}{
+        margin-left: @value;
+        margin-right: @value;
+    }
+
+    // padding
+    .p-@{key}{padding: @value;}
+    .pt-@{key}{
+        padding-top: @value;
+    }
+    .pr-@{key}{
+        padding-right: @value;
+    }
+    .pb-@{key}{
+        padding-bottom: @value;
+    }
+    .pl-@{key}{
+        padding-left: @value;
+    }
+    .pg-@{key}{
+        padding: @value;
+    }
+    .prow-@{key}{
+        padding-top: @value;
+        padding-bottom: @value;
+    }
+    .pcol-@{key}{
+        padding-left: @value;
+        padding-right: @value;
+    }
+
+    // gap
+    .gaprow-@{key}{
+        row-gap: @value;
+    }
+    .gapcol-@{key}{
+        column-gap: @value;
+    }
+    .gap-@{key}{gap: @value;}
+
+}
+
+/** 生成space间隔类名 **/
+each(@space,{
+    // margin
+    .gap_value(@key;(@value / 16rem););
+});

@@ -1,0 +1,28 @@
+//nav
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-li{
+        padding: 0.5rem 1rem;
+        font-size: @font-size-16;
+        color: @gray-700;
+        font-weight: @font-weight-md;
+        border-radius: @border-radius-lg;
+        transition: color .15s ease-in-out, 
+                    background-color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            color: @gray-800;
+            background-color: var(--bg-gray-200);
+        }
+        &.select{
+            background-color:transparent;
+            color: @brand;
+            cursor: default;
+        }
+    }
+}
+
+// 对齐方式

@@ -1,0 +1,46 @@
+/**
+*   Name：containers
+*   Size：xs、sm、md、lg、xl、fluid
+**/
+
+/****************** container ******************/
+.containers{
+    width: 100%;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+
+
+    // 以下使用了媒体查询来自适应视口大小
+    .media-watch({
+        padding: 0;
+        margin: 0 auto 0;
+    });
+    .media-phonemini({
+        padding-inline-start: 1.25rem;
+        padding-inline-end: 1.25rem;
+    });
+    .media-pad({
+        padding-inline-start: 2.5rem;
+        padding-inline-end: 2.5rem;
+    });
+    .media-desktop({
+        max-width: @breakpoints-lg;
+    });
+    
+}
+
+.vg-containers{
+    &.h-100vh{
+        .vg-asides,.vg-mains{height: 100%;}
+    }
+}
+
+/****************** container-fluid ******************/
+.containers-max-desktop{
+    // max-width: 1200px;
+    // margin: auto;
+
+}
+

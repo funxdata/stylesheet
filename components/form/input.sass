@@ -1,0 +1,155 @@
+//普通输入框
+.vg-input{
+    --input-select-border-color: @brand;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    // height: 2.25rem;
+    padding: initial;
+    border: initial;
+    transition: border .15s;
+    // &:focus-within{
+    //     border-color: @brand;
+    // }
+    &.disabled >input,
+    &.disabled >.vg-input-value{
+        color: @gray-500 !important;
+        border-color: transparent;
+        &:hover{
+            border-color: transparent!important;
+            color: @gray-500 !important;
+        }
+    }
+    .input-size-md();
+    // 控制错误提示
+    &.errortype{
+        // margin-bottom: 1.5rem;
+        >input{
+            border-color: @error;
+        }
+        // .error-tip{display: block;}
+        
+    }
+    .vg-input-value:not(input){
+        padding-left: 0.625rem;
+        padding-right: calc( 18px);
+        display: flex;
+        align-items: center;
+       & ~ i{.vis-show();}
+    }
+    >input,
+    .vg-input-value{
+        flex: 1;
+        text-align: left;
+        width: 100%;
+        // height: 2.25rem;
+        // padding-left: 0.5rem;
+        // padding-right: 0.5rem;
+        // padding-right: 2.25rem;
+        background-color: @gray-100;
+        font-size: @font-size-14;
+        line-height: @line-height-lg;
+        color: @gray-900;
+        font-weight: @font-weight-lg;
+        border: 1px solid @btn-default-border;
+        box-sizing: border-box;
+        &:hover,
+        &:focus{
+            border-color: @brand;
+        }
+        &::placeholder{
+            color: var(--color-gray-500);
+            font-weight: normal;
+        }
+        // 控制清除按钮
+        &:valid ~ i{
+            .vis-show();
+        }
+    }
+    >i{
+        .visibility("hide");
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: 0 0.5rem;
+        font-size: @font-size-18;
+        color: var(--color-gray-500);
+        transform: translateY(-50%);
+        cursor: pointer;
+        &:hover{
+            color: var(--color-gray-700);
+        }
+    }
+    // 搜索图标
+    i[class~="ic-search"]{
+        .vis-show();
+        right: initial;
+        left: 0;
+        margin-inline-start: 0.5rem;
+        margin-inline-end: 0.25rem;
+        font-size: @font-size-14;
+        &~input{
+            padding-inline-start: 1.625rem;
+        }
+    }
+    .error-tip{
+        display: none;
+        // position: absolute;
+        // top: 100%;
+        // left: 0;
+        width: 100%;
+        height: 1.5rem;
+        font-size: @font-size-12;
+        color: @error;
+        line-height: 1.5rem;
+        transition: .15s ease;
+    }
+    // 显示边框
+    &.input-border-show >input:focus{border-color: var(--input-select-border-color);}
+    //获取验证码
+    &.width-auto{width: auto;}
+}
+
+
+/********** Size大小 **********/
+.input-size-xs {
+    input,.vg-input-value{
+        height: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: @border-radius-sm;
+    }
+}
+.input-size-sm {
+    input,.vg-input-value{
+        height: 1.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: @border-radius-sm;
+    }
+}
+.input-size-md {
+    input,.vg-input-value{
+        height: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: @border-radius-md;
+    }
+}
+.input-size-lg{
+    input,.vg-input-value{
+        height: 2.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: @border-radius-lg;
+    }
+}
+.input-size-xl {
+    input,.vg-input-value{
+        height: 2.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: @border-radius-lg;
+    }
+}

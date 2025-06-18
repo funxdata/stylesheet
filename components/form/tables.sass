@@ -1,0 +1,169 @@
+//
+// Table 表格属性
+//
+.vg-tables{
+    height: 100%;
+    // 控制区域
+    &-header{
+        // overflow:hidden scroll;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: @font-size-14;
+        color: @gray-600;
+        border-bottom: 1px solid @border-color-100;
+    }
+    &-body{
+        font-size: @font-size-14;
+        color: @gray-800;
+        .tables-body-scroller{width: 100%;}
+    }  
+    .tables-row{
+        display: flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        border-bottom: 1px solid @border-color-100;
+        &:hover{
+            background-color: rgba(@black,.025);
+        }
+        &-child{
+            width: 100%;
+            .tables-row:first-of-type{
+                border-top: 1px solid @border-color-100;
+            }
+            .tables-row:last-of-type{
+                border-bottom:initial;
+            }
+        }
+        
+    }
+    .tables-col{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: 0.75rem 0.375rem;
+        min-width: 0;
+        >.row >p{.text-truncate();}
+        &:last-of-type,
+        &.tables-col-last{
+            text-align: center;
+            justify-content: center;
+            >.vg-dropdowns-modules{
+                .vg-dropdowns-title:hover{
+                    >button[class~="btn-icons"]{
+                        background-color: @gray-200;
+                        color: @brand;
+                        border-color: @gray-200;
+                    }
+                    & ~ .vg-dropdowns-content{
+                        .visibility("show");
+                    }
+                }
+                .vg-dropdowns-content{
+                    .visibility("hide");
+                    right: 0;
+                    left: initial;
+                    // &:has(+ .vg-dropdowns-title >button[class~="btn-icons"]){
+                    //     background-color: @gray-200;
+                    //     color: @brand;
+                    //     border-color: @gray-200;
+                    // }
+                    &:hover{
+                        .visibility("show");
+                    }
+                }
+
+            }
+        } 
+
+        // 对齐方式
+        &.tables-align-center{
+            justify-content: center;
+            text-align: center;
+        }
+        &.tables-align-left{
+            justify-content: flex-start;
+            text-align: left;
+        }
+        &.tables-align-right{
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        // 大小
+        &.tables-width-xs,
+        &.tables-width-sm,
+        &.tables-width-md,
+        &.tables-width-lg,
+        &.tables-width-xl{
+            flex: initial;
+        }
+        &.tables-width-xs{
+            flex-basis: 4%;
+            min-width: 3.125rem;
+            max-width: 5rem;
+        }
+        &.tables-width-sm{
+            flex-basis: 10%;
+            min-width: 6.25rem;
+            max-width: 10rem;
+        }
+        &.tables-width-md{
+            flex: 1;
+        }
+        &.tables-width-lg{
+            overflow: hidden;
+            flex-basis: 20%;
+        }
+        &.tables-width-xl{
+            overflow: hidden;
+            flex-basis: 30%;
+        }
+
+        // 强调
+        
+        // 文本隐藏
+        &.tables-text-overflow{.text-overflow();}
+        &.tables-text-overflow-all{.text-truncate-all();}
+    } 
+    &.rowcolumn{
+        .vg-tables-header{
+            // padding-right: 20px;
+            padding-right: 0.375rem;
+        }
+        .vg-tables-body{
+            display: flex;
+            flex: 1;
+            overflow:hidden scroll;
+            // padding-right: 20px;
+            &::-webkit-scrollbar {
+                width: 0.375rem;
+                height: 0.375rem;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #e0e2e1;
+                border-radius: 6.1875rem;
+            }
+
+        }
+        .tables-body-scroller{
+            height: 0;
+            flex: 1;
+        }
+    }
+}
+
+/********** 设置 tables 列表中的内容自动换行。 **********/ 
+.vg-tables.tables-wrap .tables-row{
+    white-space: initial;
+    word-break: break-all;
+}
+
+/********** 设置 tables 滚动条自定义。 **********/ 
+.vg-tables.tables-aoto-scroller{
+    height: initial;
+    .tables-body-scroller{
+        height: initial;
+        flex: initial;
+    }
+}

@@ -1,0 +1,156 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@dowell/toolkit@0.1.12": "0.1.12",
+    "npm:rolldown@^1.0.0-beta.8": "1.0.0-beta.17"
+  },
+  "jsr": {
+    "@dowell/toolkit@0.1.12": {
+      "integrity": "f92943ed8ea5d79f08d5d5e8b7e506ebe897e5c6ee95d1825aebb8a78902b6fa",
+      "dependencies": [
+        "npm:rolldown"
+      ]
+    }
+  },
+  "npm": {
+    "@emnapi/core@1.4.3": {
+      "integrity": "sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==",
+      "dependencies": [
+        "@emnapi/wasi-threads",
+        "tslib"
+      ]
+    },
+    "@emnapi/runtime@1.4.3": {
+      "integrity": "sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ==",
+      "dependencies": [
+        "tslib"
+      ]
+    },
+    "@emnapi/wasi-threads@1.0.2": {
+      "integrity": "sha512-5n3nTJblwRi8LlXkJ9eBzu+kZR8Yxcc7ubakyQTFzPMtIhFpUBRbsnc2Dv88IZDIbCDlBiWrknhB4Lsz7mg6BA==",
+      "dependencies": [
+        "tslib"
+      ]
+    },
+    "@napi-rs/wasm-runtime@0.2.11": {
+      "integrity": "sha512-9DPkXtvHydrcOsopiYpUgPHpmj0HWZKMUnL2dZqpvC42lsratuBG06V5ipyno0fUek5VlFsNQ+AcFATSrJXgMA==",
+      "dependencies": [
+        "@emnapi/core",
+        "@emnapi/runtime",
+        "@tybys/wasm-util"
+      ]
+    },
+    "@oxc-project/runtime@0.73.0": {
+      "integrity": "sha512-YFvBzVQK/ix0RQxOI02ebCumehSHoiJgvb7nOU4o7xFoMnnujLdjmxnEBK/qiOQrEyXlY69gXGMEsKYVe+YZ3A=="
+    },
+    "@oxc-project/types@0.73.0": {
+      "integrity": "sha512-ZQS7dpsga43R7bjqRKHRhOeNpuIBeLBnlS3M6H3IqWIWiapGOQIxp4lpETLBYupkSd4dh85ESFn6vAvtpPdGkA=="
+    },
+    "@rolldown/binding-darwin-arm64@1.0.0-beta.17": {
+      "integrity": "sha512-uYxIZ+QdYsjtLUNT3BWCJAww5YJMKL5ZreEO6uJKHCPUE4wbAU1t4JzQudnjrqpkviz4IQYL62Ry/uKuZxzmrw==",
+      "os": ["darwin"],
+      "cpu": ["arm64"]
+    },
+    "@rolldown/binding-darwin-x64@1.0.0-beta.17": {
+      "integrity": "sha512-uu1ovSv1BmYvpR8nJdhkPcnV90l5jmAE4YNmJHo1sSLXWPqlWfigTJ+4v1g8ww1hU4It6Rd7Odf4fqOFnRu74g==",
+      "os": ["darwin"],
+      "cpu": ["x64"]
+    },
+    "@rolldown/binding-freebsd-x64@1.0.0-beta.17": {
+      "integrity": "sha512-7PhPJ/V8RxvHtk4VDLYsSlDi43W766X2AXlMEqtUi9qpImVH55PsMUrDq74GvJsSKYAO9pAzncP6/sDB0i6F6g==",
+      "os": ["freebsd"],
+      "cpu": ["x64"]
+    },
+    "@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.17": {
+      "integrity": "sha512-VHmUdihRL3kFYgUjr6n3laeZPdmHEliFW+R1F4JhbkztpjdcZjztuOKGul6/x77JJf+LJuAgny45Gw2W5i/hsg==",
+      "os": ["linux"],
+      "cpu": ["arm"]
+    },
+    "@rolldown/binding-linux-arm64-gnu@1.0.0-beta.17": {
+      "integrity": "sha512-P/BDueuHUcw5fHNK1UBtItH/o1HNUb3n0o03/lFh3VkrP5yzC9Ov/bVj5wtat1Gb0JAm4ypVHcvlFtU/XOB57w==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "@rolldown/binding-linux-arm64-musl@1.0.0-beta.17": {
+      "integrity": "sha512-ZUYk2/j335hVqlhwpkbjgH4eENQIA6aCTwt5Lm8yv3Ny3Dp+NJWjW+a98OruAHel5dsqbKVQriP5av5Ga10rMQ==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "@rolldown/binding-linux-x64-gnu@1.0.0-beta.17": {
+      "integrity": "sha512-yM9lISQs+es9Mma1qadEj/0hOMJThEVu4azPw9vp1gVtG7fQg/k+AGqULzy175exaZS3IodVwaCC9qtk9QZiUw==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "@rolldown/binding-linux-x64-musl@1.0.0-beta.17": {
+      "integrity": "sha512-3n+NDnMItllqo09RooFrNJpPjznId7TZcicnGObbnSMBtIfIknkUyjECQssoLajjZ2E4DK7N62yd7jbRkTNZ1g==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "@rolldown/binding-wasm32-wasi@1.0.0-beta.17": {
+      "integrity": "sha512-CL7bKJg+GhZAM2R2I+mHQb3+8NJmQU1UkXqtR9tJCw60f9yOFi6cwC8lYtFHdM6CuFA+X7+8L3DcTupBNmUiRA==",
+      "dependencies": [
+        "@napi-rs/wasm-runtime"
+      ],
+      "cpu": ["wasm32"]
+    },
+    "@rolldown/binding-win32-arm64-msvc@1.0.0-beta.17": {
+      "integrity": "sha512-35aU4xs7zbAsvirVHnpKjAS0Lblrf4PzJPj2cvII0olFyizfqYZ6yxdzgiUjbPFdF34SKc7obmiA4BG16URsvA==",
+      "os": ["win32"],
+      "cpu": ["arm64"]
+    },
+    "@rolldown/binding-win32-ia32-msvc@1.0.0-beta.17": {
+      "integrity": "sha512-cPQNXNf74epAShehFaudP4TG3+faHcg+SAB+3sTVu5oGfKHfocHwNo/Uhf6HnFr+6gXpRWcnOj3+k2+KDVisCQ==",
+      "os": ["win32"],
+      "cpu": ["ia32"]
+    },
+    "@rolldown/binding-win32-x64-msvc@1.0.0-beta.17": {
+      "integrity": "sha512-n/3qfwsk6VvDK3RE/mcsA3IIduVAAiAXIkDFGZopj0EZQVYSuFmZ3V3InAk/4cue1YGMARZNPOtTR4LozfzBUA==",
+      "os": ["win32"],
+      "cpu": ["x64"]
+    },
+    "@rolldown/pluginutils@1.0.0-beta.17": {
+      "integrity": "sha512-i6p5fc1+lAmR3OHmNlv7/3PIY3EtuUu4kVARjkid38p7cmyIyqr0QFnA+k3xoB06wQUpBA91H1HFlRreZ2v5oA=="
+    },
+    "@tybys/wasm-util@0.9.0": {
+      "integrity": "sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==",
+      "dependencies": [
+        "tslib"
+      ]
+    },
+    "ansis@4.1.0": {
+      "integrity": "sha512-BGcItUBWSMRgOCe+SVZJ+S7yTRG0eGt9cXAHev72yuGcY23hnLA7Bky5L/xLyPINoSN95geovfBkqoTlNZYa7w=="
+    },
+    "rolldown@1.0.0-beta.17": {
+      "integrity": "sha512-L45QWZF/7HYfIO1nZZL83O8xOMOxBlMiFsspMRUus68wkiag3PNn6PDqEFbzbQDYN32YHFEb2qzqkC2M0enZ2A==",
+      "dependencies": [
+        "@oxc-project/runtime",
+        "@oxc-project/types",
+        "@rolldown/pluginutils",
+        "ansis"
+      ],
+      "optionalDependencies": [
+        "@rolldown/binding-darwin-arm64",
+        "@rolldown/binding-darwin-x64",
+        "@rolldown/binding-freebsd-x64",
+        "@rolldown/binding-linux-arm-gnueabihf",
+        "@rolldown/binding-linux-arm64-gnu",
+        "@rolldown/binding-linux-arm64-musl",
+        "@rolldown/binding-linux-x64-gnu",
+        "@rolldown/binding-linux-x64-musl",
+        "@rolldown/binding-wasm32-wasi",
+        "@rolldown/binding-win32-arm64-msvc",
+        "@rolldown/binding-win32-ia32-msvc",
+        "@rolldown/binding-win32-x64-msvc"
+      ],
+      "bin": true
+    },
+    "tslib@2.8.1": {
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@dowell/toolkit@0.1.12"
+    ]
+  }
+}

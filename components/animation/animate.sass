@@ -1,0 +1,167 @@
+/********** Type:progress-loading **********/
+@keyframes progress-loading {
+    50% {
+        background-position-x: -115%;
+    }
+}
+
+/********** Type:dialog-close **********/
+@keyframes dialog-close{
+    0%{
+        opacity: 0;
+        transform: translate(0 , -1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+/********** Type:bottonTop-view **********/
+@keyframes bottonTopAnima{
+    0% {.keyframes(0;translate3d(0, -100%, 0));}
+    100% {.keyframes(1;translate3d(0, 0, 0));}
+}
+
+
+/********** Type:clip **********/
+@keyframes theme-clip {
+    from {
+      clip-path: circle(0%);
+    }
+    to{
+      clip-path: circle(100%);
+    }
+}
+
+/********** Type:向下运动轨迹 **********/
+@keyframes loading-circle {
+    0% {
+      top: calc(var(--loading-width) * 0.3);
+      height: calc(var(--loading-width) * 0.025);
+      border-radius: calc(var(--loading-width) * 0.25) calc(var(--loading-width) * 0.25) calc(var(--loading-width) * 0.125) calc(var(--loading-width) * 0.125);
+      transform: scaleX(1.7);
+    }
+  
+    40% {
+      height: calc(var(--loading-width) * 0.1);
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+  
+    100% {
+      top: 0%;
+    }
+}
+
+/********** Type:向下运动轨迹投影 **********/
+@keyframes loading-circle-shadow {
+    0% {
+      transform: scaleX(1.5);
+    }
+    40% {
+      transform: scaleX(1);
+      opacity: .7;
+    }
+    100% {
+      transform: scaleX(.2);
+      opacity: .4;
+    }
+}
+
+/********** Type: loading-六面体加载 **********/
+@keyframes loading-model3d-spinner {
+    0% {
+     transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+   
+    50% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+   
+    100% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
+/********** Type: design, Name: 下载图标动画 **********/
+@keyframes download-icons {
+  0% {
+    opacity: 1;
+    transform: translateY(-0.125rem);
+    
+  }
+  50% {
+    transform: translateY(0.125rem);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-0.125rem);
+  }
+}
+
+/********** Type: design, Name: 上传图标动画 **********/
+@keyframes upload-icons {
+  0% {
+    opacity: 1;
+    transform: translateY(0.125rem);
+    
+  }
+  50% {
+    transform: translateY(-0.125rem);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0.125rem);
+  }
+}
+
+/********** Type: design, Name: 更新图标动画 **********/
+@keyframes update-icons {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+
+/********** Type: design, Name: 更新图标动画 **********/
+@keyframes animation_aside_preview_right_left{
+  from{
+      width: 0;
+  }
+  to{
+      width: 68%;
+  }
+}
+
+/********** Type: design, Name: 从下往上 **********/
+@keyframes animation_aside_preview_bottom_top{
+  from{
+    transform: translateY(100%);   
+  }
+  to{
+    transform: translateY(0%)
+  }
+}
+
+// 文字从左到右滚动效果
+@keyframes tv-factory-plank-move {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
