@@ -1,0 +1,33 @@
+name: Publish funxstylesheet
+
+on:
+  push:
+    branches:
+      - main
+    # 或者在发布时打 tag 触发
+    # tags:
+    #   - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 使用 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 运行构建（如果有）
+        run: npm run build
+
+      - name: 发布到 npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
