@@ -14,13 +14,23 @@ windows: irm https://deno.land/install.ps1 | iex
 ```
 https://nodejs.org/en/download
 ```
+* 下载
+
+```
+https://github.com/funxdata/stylesheet.git
+```
+* 下载子模块
+
+```
+git submodule update --init --recursive
+```
 
 #### 运行与开发
 
 * 启动服务
 
 ```
-    deno task view&
+  deno task view&
 ```
 
 * 停止服务
@@ -37,7 +47,6 @@ npx tailwindcss -i 编写的文件 -o 打包输出目录 --watch
 例如: npx tailwindcss -i ./styles/base.css -o ./dist/base.css --watch
 
 ```
-
 
 #### 打包与发布
 
