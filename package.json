@@ -1,0 +1,25 @@
+{
+  "name": "stylesheet",
+  "version": "1.0.0",
+  "description": "funxdata stylesheet library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funxdata/stylesheet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/funxdata/stylesheet/issues"
+  },
+  "homepage": "https://github.com/funxdata/stylesheet#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

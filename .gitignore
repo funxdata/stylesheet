@@ -135,3 +135,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 assets
+deno.lock
+package-lock.json
+deno.lock
+./deno.lock

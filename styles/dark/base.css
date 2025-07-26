@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.my-button2 {
+  @apply p-4 py-2 bg-blue-500 text-white;
+  background-color: #cccccc;
+}
