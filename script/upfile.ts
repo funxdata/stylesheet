@@ -5,9 +5,9 @@ import { S3Client, PutObjectCommand } from "npm:@aws-sdk/client-s3";
 
 // 读取配置（也可以换成 Deno.env.get）
 const config = {
-  accessKeyId: Deno.env.get("AccessKey")!,
-  secretAccessKey: Deno.env.get("SecretAccessKey")!,
-  bucket: Deno.env.get("UPX_SERVICENAME")!,
+    AccessKey: process.env.AccessKey,
+    SecretAccessKey: process.env.SecretAccessKey,
+    bucketname: process.env.UPX_SERVICENAME,
 };
 
 // 初始化 S3 客户端（兼容又拍云）
@@ -15,8 +15,8 @@ const s3 = new S3Client({
   endpoint: "https://s3.api.upyun.com",
   region: "us-east-1",
   credentials: {
-    accessKeyId: config.accessKeyId,
-    secretAccessKey: config.secretAccessKey,
+    accessKeyId: config.AccessKey,
+    secretAccessKey: config.SecretAccessKey,
   },
   forcePathStyle: true,
 } as any);
@@ -48,7 +48,7 @@ export async function uploadFileToUpyun(remoteDir: string, localPath: string, re
     const key = posix.join(remoteDir, relativePath.split(sep).join("/"));
 
     const command = new PutObjectCommand({
-      Bucket: config.bucket,
+      Bucket: config.bucketname,
       Key: key,
       Body: fileContent,
       ContentType: contentType,
