@@ -4,9 +4,9 @@ import { S3Client, PutObjectCommand } from "npm:@aws-sdk/client-s3";
 
 // ✅ 读取环境变量（兼容 Node 风格）
 const config = {
-  AccessKey: process.env.ACCESSKEY,
-  SecretAccessKey: process.env.SECRETACCESSKEY,
-  bucketname: process.env.UPX_SERVICENAME,
+  AccessKey: Deno.env.get("AccessKey"),
+  SecretAccessKey: Deno.env.get("SecretAccessKey"),
+  bucketname: Deno.env.get("UPX_SERVICENAME"),
 };
 
 // ✅ 校验环境变量是否存在
