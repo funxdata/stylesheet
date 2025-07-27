@@ -28,4 +28,4 @@ jobs:
           AccessKey: ${{ secrets.AccessKey }}
           SecretAccessKey: ${{ secrets.SecretAccessKey }}
           UPX_SERVICENAME: ${{ secrets.UPX_SERVICENAME }}
-        run: deno run ./script/public.ts
+        run: deno run --allow-net --allow-read  --allow-run --allow-ffi --allow-env --allow-sys ./script/public.ts
