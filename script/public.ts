@@ -20,4 +20,5 @@ for (const file of dir_files) {
 
 // 上传stylesheet js 文件
   const style_version = dayjs().format("YY_MM_DD")
-  await uploadFileToUpyun("assets", "../assets/app.js", "app"+style_version+".js");
+  const style_js = resolve(__dirname, "../assets/app.js");
+  await uploadFileToUpyun("assets", style_js, "app"+style_version+".js");
