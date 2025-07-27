@@ -13,12 +13,14 @@ console.log(publicDir);
 // 读取所有文件
 const dir_files = await readFilesRecursive(publicDir);
 
-// 上传文件
+// 上传文件文档文件
 for (const file of dir_files) {
-  await uploadFileToUpyun("uidocs", file.fullPath, file.relativePath);
+  await uploadFileToUpyun("ui/docs", file.fullPath, file.relativePath);
 }
 
-// 上传stylesheet js 文件
-  const style_version = dayjs().format("YY_MM_DD")
-  const style_js = resolve(__dirname, "../assets/app.js");
-  await uploadFileToUpyun("assets", style_js, "app"+style_version+".js");
+const assetsDir = resolve(__dirname, "../assets");
+const asset_files = await readFilesRecursive(assetsDir);
+// 上传文件静态文件
+for (const file of asset_files) {
+  await uploadFileToUpyun("ui/assets", file.fullPath, file.relativePath);
+}

@@ -8,21 +8,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 第一步：Checkout 代码
+      # 1
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      # 2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+       # 3
+      - name: Install dependencies
+        run: npm install
+      
+      # 4
+      - name: pack dark css
+        run: npx tailwindcss -i ./styles/dark.css -o ./assets/dark.css
 
-      # 第二步：安装 Node.js 和依赖
+      # 5
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
             deno-version: v2.x
       
-      # 第三步: 编译打包
+      # 6
       - name: deno pack
         run: deno task pack ./src/app.ts
 
-      # 第四步：上传文件到 Upyun
+      # 7
       - name: Upload files to Upyun
         env:
           AccessKey: ${{ secrets.AccessKey }}
