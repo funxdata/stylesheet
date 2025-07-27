@@ -1,32 +1,31 @@
-name: Publish funxstylesheet
+name: stylesheetxrelease
 
 on:
   push:
-    branches:
-      - main
-    # 或者在发布时打 tag 触发
-    # tags:
-    #   - 'v*.*.*'
+    branches: [main]
+
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      # 第一步：Checkout 代码
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: 使用 Node.js
-        uses: actions/setup-node@v3
+      # 第二步：安装 Node.js 和依赖
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org/
+            deno-version: v2.x
+      
+      # 第三步: 编译打包
+      - name: deno pack
+        run: deno task pack ./src/app.ts
 
-      - name: 安装依赖
-        run: npm install
-
-      - name: 运行构建（如果有）
-        run: npm run build
-
-      - name: 发布到 npm
-        run: npm publish
+      # 第四步：上传文件到 Upyun
+      - name: Upload files to Upyun
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          AccessKey: ${{ secrets.AccessKey }}
+          SecretAccessKey: ${{ secrets.SecretAccessKey }}
+          UPX_SERVICENAME: ${{ secrets.UPX_SERVICENAME }}
+        run: deno run ./script/public.ts
