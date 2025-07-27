@@ -1,6 +1,9 @@
 [submodule "icons"]
 	path = icons
 	url = https://github.com/funxdata/icons.git
+	branch = main
+
 [submodule "template"]
 	path = template
 	url = https://github.com/funxdata/template.git
+	branch = main

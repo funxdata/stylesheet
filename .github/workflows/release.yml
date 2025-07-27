@@ -7,7 +7,6 @@ on:
     # 或者在发布时打 tag 触发
     # tags:
     #   - 'v*.*.*'
-
 jobs:
   publish:
     runs-on: ubuntu-latest

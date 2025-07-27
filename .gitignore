@@ -134,8 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-assets
 deno.lock
 package-lock.json
 deno.lock
 ./deno.lock
+.DS_Store

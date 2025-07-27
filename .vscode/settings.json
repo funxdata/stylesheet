@@ -1,0 +1,18 @@
+{
+  "editor.inlineSuggest.enabled": false,
+  "editor.inlayHints.enabled": "off",
+  "editor.foldingImportsByDefault": false,
+  "editor.foldingHighlight": false,
+  "editor.showFoldingControls": "never",
+  "editor.foldingStrategy": "auto",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "meta.attribute.class.html",
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  }
+}
