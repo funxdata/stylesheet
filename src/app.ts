@@ -11,7 +11,7 @@ GlobalPagesRouter.on("/",async ()=>{
    await init_docs();
 })
 
-GlobalPagesRouter.on("/ui",async ()=>{
+GlobalPagesRouter.on("/ele",async ()=>{
    await init_docs();
 })
 GlobalPagesRouter.on("/icons",async ()=>{
