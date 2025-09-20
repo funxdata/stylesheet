@@ -8,13 +8,13 @@ export const header = `
             </a>
             <div class="flex-auto row align-center justify-end">
                 <div class="nav justify-content-end">
-                    <a class="nav-li" href="/ele">element/元素</a>
-                    <a class="nav-li" href="/ui">Component/组件</a>
-                    <a class="nav-li" href="/tpl">Tpl/模板</a>
-                    <a class="nav-li" href="/icons">Icons/图标</a>
+                    <a class="nav-li" href="/ele">元素</a>
+                    <a class="nav-li" href="/ui">组件</a>
+                    <a class="nav-li" href="/tpl">模板</a>
+                    <a class="nav-li" href="/icons">图标</a>
                 </div>
                 <div class="nav justify-content-end">
-                    <a class="nav-li" href="https://github.com/funxdata/stylesheet">
+                    <a class="nav-li" href="https://github.com/funxdata/stylesheet" target="_blank">
                         <i class="ic icon-github"></i>
                     </a>
                 </div>

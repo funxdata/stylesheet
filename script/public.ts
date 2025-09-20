@@ -1,6 +1,5 @@
 import { resolve, dirname, fromFileUrl } from "@std/path";
 import { uploadFileToUpyun, readFilesRecursive } from "./upfile.ts";
-import dayjs from "npm:dayjs";
 
 // 获取当前模块的目录路径
 const __dirname = dirname(fromFileUrl(import.meta.url));
