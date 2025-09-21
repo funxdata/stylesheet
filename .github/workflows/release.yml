@@ -26,11 +26,15 @@ jobs:
       - name: Pre-cache Deno deps
         run: deno cache ./script/public.ts
 
-      # 5. Run deno pack task (handles TS/JS & CSS via pack_tailwindcss)
+      # 5. Install Tailwind Oxide npm package
+      - name: install tailwindcss 
+        run: deno install npm:tailwindcss
+      
+      # 6. Run deno pack task (handles TS/JS & CSS via pack_tailwindcss)
       - name: deno pack
         run: deno task pack ./styles/style.css
 
-      # 6. Upload files to Upyun
+      # 7. Upload files to Upyun
       - name: Upload files to Upyun
         env:
           AccessKey: ${{ secrets.AccessKey }}
