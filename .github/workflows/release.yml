@@ -8,24 +8,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1
+      # 1. Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 5
+      # 2. Setup Deno
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-            deno-version: v2.x
-      
-      # 6
+          deno-version: v2.x
+
+      # 3. Cache Deno modules
+      - name: Cache Deno deps
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/deno
+          key: ${{ runner.os }}-deno-${{ hashFiles('deno.json') }}
+          restore-keys: |
+            ${{ runner.os }}-deno-
+
+      # 4. Pre-cache dependencies
+      - name: Pre-cache Deno deps
+        run: deno cache ./script/public.ts
+
+      # 5. Run deno pack task (TS/JS & CSS bundling)
       - name: deno pack
         run: deno task pack ./styles/style.css
 
-      # 7
+      # 6. Upload files to Upyun
       - name: Upload files to Upyun
         env:
           AccessKey: ${{ secrets.AccessKey }}
           SecretAccessKey: ${{ secrets.SecretAccessKey }}
           UPX_SERVICENAME: ${{ secrets.UPX_SERVICENAME }}
-        run: deno run --allow-net --allow-read  --allow-run --allow-ffi --allow-env --allow-sys ./script/public.ts
+        run: deno run --allow-net --allow-read --allow-run --allow-ffi --allow-env --allow-sys ./script/public.ts
