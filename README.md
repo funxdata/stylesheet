@@ -9,16 +9,13 @@ funxdata stylesheet library
 mac: curl -fsSL https://deno.land/install.sh | sh
 windows: irm https://deno.land/install.ps1 | iex
 ```
-* 安装 node
 
-```
-https://nodejs.org/en/download
-```
 * 下载
 
 ```
 https://github.com/funxdata/stylesheet.git
 ```
+
 * 下载子模块
 
 ```
@@ -30,30 +27,17 @@ git submodule update --init --recursive
 * 启动服务
 
 ```
-  deno task view&
+  deno task view
 ```
-
-* 停止服务
-```
-macos: pkill -f "deno task view"
-
-windows:  Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like "*deno task view*" } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
-```
-
-运行正在编写的文件
-
-```
-npx tailwindcss -i 编写的文件 -o 打包输出目录 --watch
-例如: npx tailwindcss -i ./styles/base.css -o ./dist/base.css --watch
-
-```
-
-#### 打包与发布
 
 
 #### 目录介绍
 
 * example 一些示例文件
+
+* assets 网站运行文件
+
+* docs ui的一些文档介绍
 
 * tests 测试文件 不打包上传
 
@@ -61,6 +45,20 @@ npx tailwindcss -i 编写的文件 -o 打包输出目录 --watch
 
 * src ui.funxdata.com 的核心运行文件
 
+* icons 关联项目icons图标库
+
+* template 关联的组件库
+
 #### 相关
 
 * figma 文件地址
+
+```
+https://www.figma.com/design/LsMvdhBhbRP6xEZauOO3jJ/ui
+
+```
+
+#### 贡献者
+
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
