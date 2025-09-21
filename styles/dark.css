@@ -1,6 +1,1 @@
-@import "tailwindcss";
 @import "./dark/base.css";
-
-.my-button {
-  @apply p-4 py-2 bg-blue-500 text-white;
-}

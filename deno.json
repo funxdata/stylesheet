@@ -1,12 +1,13 @@
 {
+    "name":"funxdataui",
     "version": "0.0.1",
     "nodeModulesDir": "auto",
     "tasks": {
         "view": "deno run --allow-net --allow-read  --allow-run --allow-ffi --allow-env --allow-sys jsr:@funxdata/toolkit/view",
-        "pack":"deno run --allow-net --allow-read --allow-env --allow-ffi --allow-run jsr:@funxdata/toolkit/pack"
+        "pack":"deno run --allow-net --allow-read --allow-env --allow-ffi --allow-run --allow-sys --allow-write jsr:@funxdata/toolkit/pack"
     },
     "imports": {
-        "@dowell/toolkit": "jsr:@funxdata/toolkit@0.1.21",
+        "@funxdata/toolkit": "jsr:@funxdata/toolkit@^0.1.32",
         "@std/path": "jsr:@std/path@^1.1.2",
         "marked": "https://esm.sh/marked"
     },

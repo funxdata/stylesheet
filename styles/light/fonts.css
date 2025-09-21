@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* 全局字体尺寸定义 */
+:root {
+  --font-size-base: 1rem;        /* 基础字体大小 */
+  --font-size-lg: 1.125rem;      /* 大号字体 */
+  --font-size-xl: 1.25rem;      /* 超大号字体 */
+  --font-size-2xl: 1.5rem;      /* 二倍大号字体 */
+  --font-size-3xl: 1.875rem;    /* 三倍大号字体 */
+  --font-size-4xl: 2.25rem;     /* 四倍大号字体 */
+  --font-size-5xl: 3rem;        /* 五倍大号字体 */
+  --font-size-6xl: 3.75rem;     /* 六倍大号字体 */
+}
+
+/* 应用字体尺寸 */
+body {
+  font-size: var(--font-size-base);
+}
+
+h1 {
+  font-size: var(--font-size-5xl); /* 最大标题 */
+}
+
+h2 {
+  font-size: var(--font-size-4xl); /* 大标题 */
+}
+
+h3 {
+  font-size: var(--font-size-3xl); /* 中等标题 */
+}
+
+h4 {
+  font-size: var(--font-size-2xl); /* 小标题 */
+}
+
+h5 {
+  font-size: var(--font-size-xl);  /* 次标题 */
+}
+
+h6 {
+  font-size: var(--font-size-lg);  /* 最小标题 */
+}
+
+/* 在其他元素中应用这些字体大小 */
+.my-text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.my-text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.my-text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.my-text-3xl {
+  font-size: var(--font-size-3xl);
+}

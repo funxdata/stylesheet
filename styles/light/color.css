@@ -1,0 +1,15 @@
+
+/* 定义自定义颜色 */
+:root {
+  --primary: #1D4ED8;        /* 主色 */
+  --secondary: #9333EA;      /* 次色 */
+  --accent: #F59E0B;         /* 强调色 */
+  --neutral: #64748B;        /* 中性色 */
+  --neutral-light: #D1D5DB;  /* 中性浅色 */
+  --neutral-dark: #334155;   /* 中性深色 */
+  --success: #10B981;        /* 成功色 */
+  --warning: #F59E0B;        /* 警告色 */
+  --error: #EF4444;          /* 错误色 */
+  --background: #F3F4F6;     /* 背景色 */
+  --surface: #FFFFFF;        /* 表面色 */
+}

@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://static.funxdata.com/release/css/icons11026.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/markdown.min.css">
-  <link rel="stylesheet" href="https://uicdn.funxdata.com/uiicons/ic.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <script type="module" src="https://uicdn.funxdata.com/uxpages/0.0.26/router.js"></script>
   <script type="module" src="https://uicdn.funxdata.com/uxpages/0.0.26/browser.js"></script>
   <script type="module">
-    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-      globalThis.marked = marked
+    import { marked } from "./assets/marked.js";
+    globalThis.marked = marked
   </script>
   <title>funxdata ui</title>
 </head>
 <body>
   <div id="app"></div>
 </body>
-<script src="./src/app.ts"></script>
+<script  type="module" src="./src/app.ts"></script>
 </html>
