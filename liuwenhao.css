@@ -1,0 +1,7 @@
+@import "liuwenhaocss";
+.light {
+    @import "./light.css";
+}
+.dark {
+ @import "./dark.css";
+}
