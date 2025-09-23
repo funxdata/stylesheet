@@ -1,0 +1,6 @@
+.header{
+    width: 100%;
+    min-height: 80px;
+    line-height: 80px;
+    @apply w-full min-h-[80px] leading-[80px] flex items-center justify-between shadow px-6 py-3;
+}
