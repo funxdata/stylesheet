@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
 .liuwenhao {
- @import "./liuwenhao.css";
+ @import "./liuwenhao/base.css";
+}
+.lizhixian {
+ @import "./lizhixian/base.css";
+}
+.djh {
+ @import "./djh/base.css";
 }
