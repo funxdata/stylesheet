@@ -60,5 +60,3 @@ https://www.figma.com/design/LsMvdhBhbRP6xEZauOO3jJ/ui
 
 #### 贡献者
 
-<!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
