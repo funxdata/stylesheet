@@ -1,7 +1,5 @@
 @import "tailwindcss";
-.light {
-    @import "./light.css";
-}
-.dark {
- @import "./dark.css";
+
+.liuwenhao {
+ @import "./liuwenhao.css";
 }

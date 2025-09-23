@@ -34,6 +34,10 @@ jobs:
       - name: deno pack
         run: deno task pack ./styles/style.css
 
+      # 7. Run deno pack task (handles TS/JS & CSS via pack_tailwindcss)
+      - name: deno pack
+        run: deno task pack ./styles/styles.css
+
       # 7. Upload files to Upyun
       - name: Upload files to Upyun
         env:
