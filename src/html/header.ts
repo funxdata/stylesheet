@@ -1,5 +1,5 @@
 export const header = `
-<header class="w-full shadow bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <header class="fixed top-0 left-0 right-0 h-16 flex items-center px-6 z-20">
   <div class="container mx-auto flex items-center justify-between px-6 py-3 min-h-[80px]">
     <!-- Logo -->
     <a href="/ui" class="flex items-center space-x-2">
