@@ -1,0 +1,10 @@
+@import "tailwindcss";
+.light {
+    @import "./light.css";
+}
+.dark {
+ @import "./dark.css";
+}
+.lizhixian{
+	@import "./lizhixian.css";
+}

@@ -3,8 +3,8 @@ export const container = `
 `
 
 export const aside =`
-<aside class="vg-asides-doc overflow-y" fxtag="aside">
-    <ul class="vg-menus-doc mb-12" fxtag="asideIntroduce">
+<aside class="vg-asides-doc overflow-y">
+    <ul class="vg-menus-doc mb-12">
         <li class="vg-menus-doc-li">
             <a href="/ui/intro">
             <span class="icons mr-8">
@@ -96,6 +96,6 @@ export const aside =`
                 </a>
             </li>
         </ul>
-     </div>
-    </aside>
+    </div>
+</aside>
 `

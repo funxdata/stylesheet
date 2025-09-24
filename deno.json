@@ -8,6 +8,11 @@
         "release":"deno run --allow-net --allow-read --allow-env --allow-ffi --allow-run --allow-sys --allow-write jsr:@funxdata/toolkit/release"
     },
     "imports": {
+        "@/":"./",
+        "@funxdata/pages": "jsr:@funxdata/pages@^0.0.24",
+        "@funxdata/pages/routtype": "jsr:@funxdata/pages@^0.0.24/routtype",
+        "@funxdata/pages/tools": "jsr:@funxdata/pages@^0.0.24/tools",
+        "@funxdata/pages/toolstype": "jsr:@funxdata/pages@^0.0.24/toolstype",
         "@funxdata/toolkit": "jsr:@funxdata/toolkit@^0.1.32",
         "@std/path": "jsr:@std/path@^1.1.2",
         "marked": "https://esm.sh/marked"

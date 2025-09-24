@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-li{
+        padding: 0.5rem 1rem;
+
+        transition: color .15s ease-in-out, 
+                    background-color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            color:--primary;
+            background-color: var(--bg-gray-200);
+        }
+        &.select{
+            background-color:transparent;
+            cursor: default;
+        }
+    }
+}

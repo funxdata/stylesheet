@@ -1,0 +1,21 @@
+.logo{
+    width: 80px;
+    @apply flex items-center space-x-2;
+    .tags{
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        padding: .1875rem .375rem;
+        background-color: var(--theme-brand);
+        color: var(--color-white);
+        margin-inline-start: .5rem;
+        font-size: .7499625rem;
+        font-weight: 900;
+        line-height: 1;
+        border-radius: 999px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

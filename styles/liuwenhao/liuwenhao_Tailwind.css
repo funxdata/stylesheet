@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TailwindCSS Demo</title>
+  <!-- 引入 TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入 Font Awesome 用于图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- 页头 -->
+  <header class="bg-blue-500 text-white p-6 text-center">
+      <h1 class="text-3xl font-bold"><<i class="fas fa-layer-group mr-2"></i>刘文浩的 Tailwind 页面</h1>
+    <p class="text-blue-100 mt-2">简单快速构建 UI</p >
+  </header>
+
+  <!-- 导航 -->
+  <nav class="bg-blue-600 p-4 text-white flex justify-center space-x-4">
+    <a href=" " class="hover:text-yellow-300">首页</a >
+    <a href="#" class="hover:text-yellow-300">关于</a >
+    <a href="#" class="hover:text-yellow-300">联系</a >
+    <a href="#" class="hover:text-yellow-300">文档</a >
+    <a href="#" class="hover:text-yellow-300">案例</a >
+  </nav>
+
+  <!-- 主体内容 -->
+  <main class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4"><<i class="fas fa-file-alt mr-2"></i>内容区域</h2>
+    <p class="mb-4">
+      TailwindCSS 是一个实用类优先（Utility-First）的 CSS 框架，直接在 HTML 中使用类名控制布局和样式。
+    </p >
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Tailwind 优势</h3>
+        <p class="mb-2">无需编写自定义 CSS，通过组合实用类即可快速构建界面。</p >
+        <p>高度可定制，能轻松适配各种设计需求。</p >
+      </div>
+      <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">使用场景</h3>
+        <p class="mb-2">适合快速开发原型，也可用于大型项目的样式管理。</p >
+        <p>尤其在需要响应式设计的项目中表现出色。</p >
+      </div>
+      <div class="bg-white p-7 rounded shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">简单示例</h3>
+        <pre class="bg-gray-100 p-2 rounded text-sm">
+&lt;div class="bg-blue-500 text-white p-4"&gt;
+  这是一个示例
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+
+    <a href="#" class="inline-block mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition active:bg-blue-700">
+      点击按钮
+    </a >
+
+    <form class="mt-8 bg-white p-6 rounded shadow" method="get">
+      <h3 class="text-xl font-bold mb-4" >联系我们</h3>
+      <div class="mb-4">
+        <label for="name" class="block mb-2">姓名</label>
+        <input type="text" id="name" class="w-full p-2 border rounded" placeholder="请输入姓名">
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block mb-2">邮箱</label>
+        <input type="email" id="email" class="w-full p-2 border rounded" placeholder="请输入邮箱">
+      </div>
+
+        <div class="mb-4">
+        <label for="message" class="block mb-2">省份</label>
+            <select name="province">
+            <option>--请选择--</option>
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广东</option>
+            <option value="shenzhen">海南</option>
+            <option value="hangzhou">浙江</option>
+            <option value="nanjing">江苏</option>
+            <option value="wuhan">湖北</option>
+            <option value="tianjin">陕西</option>
+            <option value="anhui">安徽</option>
+        </select>
+        </div>
+      <div class="mb-4">
+        <label for="message" class="block mb-2">留言</label>
+        <textarea id="message" rows="4" class="w-full p-2 border rounded" placeholder="请输入留言内容"></textarea>
+      </div>
+
+        <div class="mb-4">
+            <label for="message" class="block mb-2">自我描述</label>
+            <textarea id="" rows="4" class="w-full p-2 border rounded" placeholder="请输入自我描述内容"></textarea>
+        </div>
+
+
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">提交</button>
+    </form>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 text-gray-200 p-4 text-center mt-8">
+    &copy; 2025 Tailwind Demo
+  </footer>
+</body>
+</html>
+

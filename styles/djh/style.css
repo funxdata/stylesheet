@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.djh{
+ @import "./djh.css";
+}
