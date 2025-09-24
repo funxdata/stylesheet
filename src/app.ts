@@ -6,7 +6,6 @@ import { header } from "./html/header.ts"
 import { container} from "./html/aside.ts";
 import { load_ui_pages } from "./rout/ui_route.ts"
 
-
 const document_app = document.getElementById("app") as HTMLElement;
 document_app.insertAdjacentHTML("beforeend", header);
 document_app.insertAdjacentHTML("beforeend", container);
@@ -33,7 +32,7 @@ for (let index = 0; index < data_ui_json.length; index++) {
             let temp_rout = GlobalPagesRouter.on(item.rout as string,item.title)
             if(temp_rout!=null){
                 temp_rout.hook = async ()=>{
-                    load_ui_pages(item.rout);
+                    load_ui_pages(temp_rout.pathname);
                 } 
             }
         }

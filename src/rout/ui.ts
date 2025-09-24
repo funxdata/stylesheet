@@ -8,7 +8,6 @@ const TplToHtml = (globalThis as any)["TplToHtml"] as Tpl;
 declare global {
   var marked: any;
 }
-
 const init_docs= async ()=>{
   const document_container = document.getElementById("container") as HTMLElement;
   document_container.innerHTML = TplToHtml.renderString(aside,{navdata:data_ui_json})+docmain;

@@ -16,27 +16,27 @@ export const data_ui_json= [
         haschild:true,
         item:[
             {
-                rout:"ui/color",
+                rout:"/ui/color",
                 title:"color"
             },
             {
-                rout:"ui/grid",
+                rout:"/ui/grid",
                 title:"grid"
             },
             {
-                rout:"ui/shadow",
+                rout:"/ui/shadow",
                 title:"Shadow"
             },
             {
-                rout:"ui/transitions",
+                rout:"/ui/transitions",
                 title:"Transitions"
             },
             {
-                rout:"ui/typography",
+                rout:"/ui/typography",
                 title:"Typography"
             },
             {
-                rout:"ui/adaptation",
+                rout:"/ui/adaptation",
                 title:"Adaptation"
             }
         ]
@@ -46,19 +46,19 @@ export const data_ui_json= [
         haschild:true,
         item:[
             {
-                rout:"ui/badges",
+                rout:"/ui/badges",
                 title:"badges"
             },
             {
-                rout:"ui/buttons",
+                rout:"/ui/buttons",
                 title:"buttons"
             },
             {
-                rout:"ui/breadcrumbs",
+                rout:"/ui/breadcrumbs",
                 title:"breadcrumbs"
             },
             {
-                rout:"ui/cards",
+                rout:"/ui/cards",
                 title:"cards"
             }
         ]
@@ -68,35 +68,35 @@ export const data_ui_json= [
         haschild:true,
         item:[
             {
-                rout:"ui/autocomplete",
+                rout:"/ui/autocomplete",
                 title:"autocomplete"
             },
             {
-                rout:"ui/checkboxes",
+                rout:"/ui/checkboxes",
                 title:"Checkboxes"
             },
             {
-                rout:"ui/chips",
+                rout:"/ui/chips",
                 title:"chips"
             },
             {
-                rout:"ui/pickers",
+                rout:"/ui/pickers",
                 title:"Pickers"
             },
             {
-                rout:"ui/range",
+                rout:"/ui/range",
                 title:"range"
             },
             {
-                rout:"ui/select",
+                rout:"/ui/select",
                 title:"select"
             },
             {
-                rout:"ui/switch",
+                rout:"/ui/switch",
                 title:"switch"
             },
             {
-                rout:"ui/text",
+                rout:"/ui/text",
                 title:"text"
             }
         ]
