@@ -1,7 +1,7 @@
 import { HttpClient } from './request.ts';
 
 const request = new HttpClient({
-  baseURL: 'https://uicdn.funxdata.com/ui/docs/',
+  baseURL: './docs/',
   timeout: 5000
 });
 
