@@ -1,5 +1,3 @@
 export const docmain = `
-<main class="vg-main-doc flex1 overflow-y markdown-body" id="markdown-doc-main" style="margin-top:50px;">
-
-</main>
+<main class="ml-64 flex-1 h-[calc(100vh-4rem)] overflow-y-auto p-6" id="markdown-doc-main"></main>
 `
