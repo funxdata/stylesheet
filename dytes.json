@@ -1,0 +1,20 @@
+{
+  "name": "stylesheet",
+  "uuid": "51ac57f7-d0e0-4263-bc48-afd87b839207",
+  "version": "1.0.3",
+  "description": "stylesheet for html render",
+  "keywords": [
+    "stylesheet",
+    "html"
+  ],
+  "author": "funxdata",
+  "type": "web",
+  "exports": {
+    "./assets/funxui.css": "funxui.css",
+    "./assets/funxicon.css": "funxicon.css",
+    "./assets/icons.eot": "icons.eot",
+    "./assets/icons.ttf": "icons.ttf",
+    "./assets/icons.woff": "icons.woff",
+    "./assets/icons.woff2": "icons.woff2"
+  }
+}
