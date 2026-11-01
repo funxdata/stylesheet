@@ -1,7 +1,7 @@
 {
   "name": "stylesheet",
   "uuid": "51ac57f7-d0e0-4263-bc48-afd87b839207",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "stylesheet for html render",
   "keywords": [
     "stylesheet",
@@ -12,6 +12,7 @@
   "exports": {
     "./assets/funxui.css": "funxui.css",
     "./assets/funxicon.css": "funxicon.css",
+    "./assets/chat.css": "chat.css",
     "./assets/icons.eot": "icons.eot",
     "./assets/icons.ttf": "icons.ttf",
     "./assets/icons.woff": "icons.woff",
