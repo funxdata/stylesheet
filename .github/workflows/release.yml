@@ -1,51 +1,33 @@
-name: stylesheetxrelease
+name: Release
 
 on:
   push:
-    branches: [main]
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  publish:
+    name: Publish S3
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout code
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # 2. Setup Deno
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
+      - name: Verify version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(node -p "require('./dytes.json').version")
+          if [ "${GITHUB_REF_TYPE}" = "tag" ] && [ "${GITHUB_REF_NAME#v}" != "${version}" ]; then
+            echo "tag ${GITHUB_REF_NAME} 与 dytes.json ${version} 不一致" >&2
+            exit 1
+          fi
+
+      - name: Publish to S3
+        uses: dytescn/dytes@v0.1.9
         with:
-          deno-version: v2.x
-
-      # 3. Install Tailwind Oxide npm package
-      - name: Install Tailwind Oxide
-        run: deno install -Af --global --name tailwind_oxide npm:@tailwindcss/oxide@4.1.13
-
-      # 5. Install Tailwind Oxide npm package
-      - name: install tailwindcss 
-        run: deno install npm:tailwindcss
-      
-      # 6. Run deno pack task (handles TS/JS & CSS via pack_tailwindcss)
-      - name: pack theme css
-        run: deno task pack ./styles/style.css
-
-      # 7. Run deno pack task (handles TS/JS & CSS via pack_tailwindcss)
-      - name: pack release css
-        run: deno task pack ./styles/styles.css
-      
-      # 8. 同步样式
-      - name: release assets
-        env:
-          AccessKey: ${{ secrets.AccessKey }}
-          SecretAccessKey: ${{ secrets.SecretAccessKey }}
-          UPX_SERVICENAME: ${{ secrets.UPX_SERVICENAME }}
-        run: deno task release ./assets ui/assets
-      
-      # 9. 同步文档
-      - name: release doccs
-        env:
-          AccessKey: ${{ secrets.AccessKey }}
-          SecretAccessKey: ${{ secrets.SecretAccessKey }}
-          UPX_SERVICENAME: ${{ secrets.UPX_SERVICENAME }}
-        run: deno task release ./docs ui/docs
+          command: publish
+          args: --force
